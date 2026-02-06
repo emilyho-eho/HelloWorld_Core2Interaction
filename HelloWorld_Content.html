@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelloWorld_Content</title>
+
+    <link rel="stylesheet" href="HelloWorld_Style.css">
+</head>
+
+<body>
+    <h1>Hi! I'm Emily Ho</h1>
+<div class="wtf">
+  <img src="CurrentPhoto(HelloWorld).jpg" class="scaled-img" alt="Description">
+</div>
+
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>SCHOOL: PARSONS SCHOOL OF DESIGN</p>
+    <p>BIRTHDAY: 02.12.2006</p>
+    <p>MBTI: INFP</p>
+    <p>ZODIAC: AQUARIUS</p>
+    <p>STATUS: TIRED & LOWKEY BURNT OUT LOL</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    <h1>Random bits:</h1>
+
+    <div class="grid-container">
+    <img src="Photo1(HelloWorld).jpg" onclick="openPopup(this.src, 'I love the rain. As long as Im not physically in it, listening to the sound of raindrops beading off of an umbrella or hitting the sunroof window of a car triggers a lot of nostalgia and core memories')">
+    <img src="Photo2(HelloWorld).jpg" onclick="openPopup(this.src, 'My parents are from Taiwan and I was born in Dallas, TX, but I grew up in Queens, NYC. I dont claim my southern side lol')">
+    <img src="Photo3(HelloWorld).jpg" onclick="openPopup(this.src, 'I have no siblings. Contrary to the only-child hate propaganda, I can thankfully confirm I do not fit the stereotypes. Whenever I meet someone new and they try to guess, the popular assumption is that Im an older sister? Which I think is interesting')">
+    <img src="Photo4(HelloWorld).jpg" onclick="openPopup(this.src, 'I am a perfectionist to the point where it becomes a detriment to my own productivity when manifested into procrastination')">
+    <img src="Photo5(HelloWorld).jpg" onclick="openPopup(this.src, 'I hate Linkedin')">
+    <img src="Photo6(HelloWorld).jpg" onclick="openPopup(this.src, 'I have a playlist with over 1.5k songs that Ive been adding to since 2020! Heres my <a href=\'https://open.spotify.com/user/r1dnx0fejkwbzhldyto5657uw\' target=\'_blank\'>Spotify profile</a>. I also have been to ~18 concerts, lowkey lost count')">
+    <img src="Photo7(HelloWorld).jpg" onclick="openPopup(this.src, 'Ive had an ongoing nonstop sushi craving for like a whole year now. I really want to buy a huge block of sashimi-grade block of salmon and eat it like a bear')">
+    <img src="Photo8(HelloWorld).jpg" onclick="openPopup(this.src, 'Im an ambivert, probably leaning towards introvert(?) When meeting new people I feel like I tend to put up an extroverted front in efforts to connect better. At first I may come off somewhat distant/detatched but I definitely more loud silly and care-free when you get to know me')">
+    <img src="Photo9(HelloWorld).jpg" onclick="openPopup(this.src, 'If you give me a card or something of that nature I will hold onto it forever. Im a very sentimental person, which is why I used to love junk-journaling until I stopped keeping up with it as much. Now I just have a bunch of ephemera stored in a box that Ill probably never get around to actually putting in my journal')">
+</div>
+
+<div id="popup" class="popup" onclick="closePopup()">
+    <div class="popup-content" onclick="event.stopPropagation()">
+        <img id="popupImg" src="">
+        <p id="popupCaption"></p>
+        <button class="close-btn" onclick="closePopup()">Go Back</button>
+    </div>
+</div>
+
+<script>
+function openPopup(imgSrc, caption) {
+    document.getElementById('popup').style.display = 'flex';
+    document.getElementById('popupImg').src = imgSrc;
+    document.getElementById('popupCaption').innerHTML = caption;
+}
+
+function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+}
+</script>

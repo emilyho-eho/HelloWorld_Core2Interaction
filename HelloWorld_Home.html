@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelloWorld_Home</title>
+    <link rel="stylesheet" href="HelloWorld_Style.css">
+</head>
+
+<body>
+<!--Background video-->
+    <video autoplay muted loop playsinline style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">
+    <source src="Rain Window (YT).mov" type="video/mp4">
+</video>
+    
+    <H1>Hello World,</H1>
+    <p>enjoy and stay here for a while!</p>
+
+<!--Rain button-->
+<div class="rainbutton">
+    <button onclick="document.getElementById('rain').play(); this.parentElement.style.display='none'; document.getElementById('Content').classList.add('show');">
+        <h3>click here to listen to the rain</h3>
+    </button>
+</div>
+
+<audio id="rain" loop preload="auto">
+    <source src="lightrain(worldsite).wav" type="audio/wav">
+</audio>
+
+<!--Content button-->
+<div id="Content" class="contentbutton">
+    <button onclick="document.getElementById('rain').pause(); document.getElementById('loadingScreen').style.display='block'; document.getElementById('loadingVideo').play(); document.getElementById('loadingAudio').play();">
+        <h3>Just don't click this button...</h3>
+    </button>
+</div>
+
+<!--Loading screen-->
+<div id="loadingScreen" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 9999;">
+    <video id="loadingVideo" onended="window.location.href='HelloWorld_Content.html'" style="width: 100%; height: 100%; object-fit: cover;">
+        <source src="ExplosionTransitionVideo.mov" type="video/mp4">
+    </video>
+    <audio id="loadingAudio" src="ExplosionTransition.mp3"></audio>
+</div>
+
+</body>
