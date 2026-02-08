@@ -24,14 +24,14 @@ h2{
     font-family: monospace;
     font-weight: lighter;
 
-    margin-left: 100;
-    margin-right: 100;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 h3{
     color: rgb(0, 139, 130);
     font-family: monospace;
-    font-size: 0.6em;
+    font-size: 8pt;
     font-weight: lighter;
 }
 
